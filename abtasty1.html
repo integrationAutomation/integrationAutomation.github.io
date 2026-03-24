@@ -7,6 +7,13 @@
 <title> My Page </title>
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 
+<script>
+  document.addEventListener('abtasty_resetActionTracking',(e)=>{console.log(e, "abtasty_resetActionTracking")});
+  window.addEventListener('abtasty_consentValid',(e)=>{console.log(e, "abtasty_consentValid")});
+  window.addEventListener('abtasty_executedCampaign',(e)=>{console.log(e, "abtasty_executedCampaign")});
+  window.addEventListener('abtasty_tagContentExecuted',(e)=>{console.log(e, "abtasty_tagContentExecuted")});
+  document.addEventListener('abtasty_trackingInitialized',(e)=>{console.log(e, "abtasty_trackingInitialized")});
+</script>
 
 
 <script>
