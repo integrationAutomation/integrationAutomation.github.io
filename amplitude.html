@@ -69,6 +69,30 @@ amplitude.getInstance().init("f461c2c720775c286bedc38e7c4be399");
 
 
 <body>
+
+    <button onclick="consoleError()">Console Error</button>
+<button onclick="uncaughtException()">Uncaught Exception</button>
+<button onclick="promiseRejection()">Promise Rejection</button>
+<button onclick="networkError()">Network Error</button>
+
+<script>
+function consoleError() {
+    console.error("QA: Console Error");
+}
+
+function uncaughtException() {
+    throw new Error("QA: Uncaught Exception");
+}
+
+function promiseRejection() {
+    Promise.reject(new Error("QA: Promise Rejection"));
+}
+
+function networkError() {
+    fetch("https://non-existent-domain-qa-test.example/api")
+        .catch(() => {});
+}
+</script>
     
     <h1> @#!!this is the form!!!</h1>
 <a id="abcd" href="my.html"> MY PAGE </a>
