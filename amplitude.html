@@ -3,12 +3,9 @@
     
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy"
-      content="script-src 'self'">
+    
 
-<script>
-eval("console.log('hello')");
-</script>
+
 
 <title> My Page </title>
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -81,6 +78,14 @@ amplitude.getInstance().init("f461c2c720775c286bedc38e7c4be399");
 <button onclick="promiseRejection()">Promise Rejection</button>
 <button onclick="networkError1()">Network Error1</button>
     <button onclick="networkError2()">Network Error2</button>
+    <button onclick="triggerCSP()">
+    Trigger CSP
+</button>
+
+<script>
+function triggerCSP() {
+    eval("console.log('Hello')");
+}
 
 
 <script>
