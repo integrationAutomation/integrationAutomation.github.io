@@ -82,6 +82,29 @@ amplitude.getInstance().init("f461c2c720775c286bedc38e7c4be399");
     Trigger CSP
 </button>
 
+    <form id="dynamic_form" action="https://integrationautomation.github.io/smartcode3.html">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name_1" onchange="changeFieldId(this);" required="">
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+
+    <form id="sample-form" action="https://integrationautomation.github.io/smartcode3.html?a=b">
+        <label for="name">Name:</label>
+        
+        <label for="checkbox">Check this:</label>
+        <input type="checkbox" id="checkbox1" name="checkbox"><br><br>
+        
+        <input type="submit" value="Submit">
+      </form>
+
+    <form id="contactUs" action="https://integrationautomation.github.io/abtasty.html?&a=b">
+              
+              <button type="submit" class="btn font-weight-bold atlas-cta atlas-cta-wide cta-green my-3">
+                Submit
+              </button>
+            </form>
+
 <script>
 function triggerCSP() {
     eval("console.log('Hello')");
