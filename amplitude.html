@@ -143,8 +143,19 @@ function networkError2() {
 </script>
     
     <h1> @#!!this is the form!!!</h1>
-<a id="abcd" href="https://integrationautomation.github.io/amplitude.html?id="+account_ids> MY PAGE </a>
-        <a id="xyz" href="https://integrationautomation.github.io/amplitude1.html?id="+account_ids> MY PAGE 1</a>
+<a id="abcd" href="#">MY PAGE</a>
+
+
+
+    <a id="xyz" href="#">MY PAGE</a>
+<script>
+  const id = new URLSearchParams(window.location.search).get("id");
+
+  document.getElementById("abcd").href =
+    "https://integrationautomation.github.io/amplitude.html?id=" + encodeURIComponent(id);
+    document.getElementById("xyz").href =
+    "https://integrationautomation.github.io/amplitude1.html?id=" + encodeURIComponent(id);
+</script>
 
 <div id="rohit-gupta"><form name="first" action="rohit.html" method="POST">
 First Name : <input type="text" name="fname"><br/>
